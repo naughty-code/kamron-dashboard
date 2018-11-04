@@ -11,8 +11,8 @@ const client = new Client({
 
 app.get('/', async (req, res) => {
     await client.connect();
-    {rows} = await client.query('SELECT * FROM db.full_view');
-    res.json(rows);
+    result = await client.query('SELECT * FROM db.full_view');
+    res.json(result.rows);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
