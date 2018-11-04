@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.min.css">
+  <link rel="stylesheet" href="app.css">
+
+  <!-- External dependencies -->
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.min.js"></script>
+  <script src="node_modules/angular-aria/angular-aria.js"></script>
+  <script src="node_modules/angular-animate/angular-animate.js"></script>
+  <script src="node_modules/angular-messages/angular-messages.js"></script>
+  <script src="node_modules/angular-material/angular-material.js"></script>
+  <script src="node_modules/angular-ui-grid/ui-grid.min.js"></script>
+
+  <!-- App module -->
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+  <!-- Single Table module -->
+  <script src="single-table/single-table.module.js"></script>
+  <script src="single-table/single-table.controller.js"></script>
+  
+
+</head>
+<body ng-app="app" layout="column">
+      <md-toolbar layout="row" class="toolbar">
+        <div>
+          <h5>Invisible Technologies</h5>
+        </div>
+      </md-toolbar>
+  
+      <div flex layout="row">
+          <md-sidenav md-is-locked-open="true" class="sidenav md-whiteframe-5dp">
+            <md-list>
+                <md-list-item ng-href='#!/full-view'>
+                    <md-icon class="material-icons">domain</md-icon>
+                    <p>Full View</p>
+                </md-list-item>
+              <md-list-item ng-href='#!/quick-view'>
+                  <md-icon class="material-icons">near_me</md-icon>
+                  <p>Quick View</p>
+              </md-list-item>
+              <md-list-item ng-href='#!/social-networks'>
+                  <md-icon class="material-icons">share</md-icon>
+                  <p>Social Networks</p>
+              </md-list-item>
+              <md-list-item ng-href='#!/details'>
+                  <md-icon class="material-icons">settings_ethernet</md-icon>
+                  <p>Details</p>
+              </md-list-item>
+              <md-list-item ng-href='#!/incomplete-contacts'>
+                  <md-icon class="material-icons">opacity</md-icon>
+                  <p>Incomplete Contacts</p>
+              </md-list-item>
+              <md-list-item ng-href='#!/empty-contacts'>
+                  <md-icon class="material-icons">hourglass_empty</md-icon>
+                  <p>Empty Contacts</p>
+              </md-list-item>
+            </md-list>
+          </md-sidenav>
+  
+          <md-content flex layout="column" ng-view>
+          </md-content>
+      </div>
+  
+</body>
+</html>
